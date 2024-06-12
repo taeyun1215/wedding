@@ -7,7 +7,7 @@ import { Caption, Paragraph } from '@/components/Text.tsx';
 
 const Invitation = () => {
   const { greeting } = data;
-  const [date, setDate] = useState(new Date(2024, 8, 1)); // Corrected to September 2024
+  const [date] = useState(new Date(2024, 8, 1)); // Corrected to September 2024
   const [countdown, setCountdown] = useState('');
 
   useEffect(() => {
