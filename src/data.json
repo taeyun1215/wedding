@@ -1,6 +1,8 @@
 {
   "greeting": {
-    "title": "이태윤 \uD83D\uDC8D 박진아\n결혼합니다!",
+    "weddingDate": "24 | 10 | 28",
+    "weddingWeek": "SATURDAY",
+    "title": "이태윤 | 박진아",
     "message": "저희 결혼합니다.\n\n서로에게 알맞은 온도로 따뜻하던 우리.\n부부로서 첫걸음을 내딛는 그 설렘의 순간에\n소중한 분들을 초대합니다.",
     "host": {
       "groom": {

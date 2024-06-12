@@ -7,6 +7,8 @@ export interface IData {
 }
 
 export interface IGreeting {
+  weddingDate: string;
+  weddingWeek: string;
   mainImg: string;
   title: string;
   date: string;
