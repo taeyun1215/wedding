@@ -10,7 +10,7 @@ const Location = () => {
   return (
     <LocationWrapper>
       <PointTitle>{mapInfo.address1}</PointTitle>
-      <Caption textAlign={'center'}>{mapInfo.address2}</Caption>
+      <StyledCaption textAlign={'center'}>{mapInfo.address2}</StyledCaption>
       <Map />
       <MapButtons />
       <Address />
@@ -24,4 +24,8 @@ const LocationWrapper = styled.div`
   width: 90%;
   display: flex;
   flex-direction: column;
+`;
+
+const StyledCaption = styled(Caption)`
+  margin-bottom: 40px;  // 하단에 20px의 마진 추가
 `;
