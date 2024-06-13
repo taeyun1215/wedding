@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import data from 'data.json';
-import { Caption, PointTitle } from '@/components/Text.tsx';
+import { Caption, PointTitle as OriginalPointTitle } from '@/components/Text.tsx';
 import { ILocationInfo } from '@/types/data.ts';
 
 const Address = () => {
@@ -22,7 +22,7 @@ const Address = () => {
 
         return (
           <Way key={title}>
-            <PointTitle>{title}</PointTitle>
+            <StyledPointTitle>{title}</StyledPointTitle>
             {subtitle && <PointSubTitle>{subtitle}</PointSubTitle>}
             {desc1 && <DescriptionWithCircle1 color={getColor(1)}>{desc1}</DescriptionWithCircle1>}
             {desc2 && <DescriptionWithCircle2 color={getColor(2)}>{desc2}</DescriptionWithCircle2>}
@@ -49,8 +49,12 @@ const Way = styled.div`
   text-align: left;
 `;
 
+const StyledPointTitle = styled(OriginalPointTitle)`
+  font-size: 22px; 
+`;
+
 const PointSubTitle = styled.h2`
-  font-size: 15px;
+  font-size: 17px;
   color: #333;
   margin: 10px 0 -13px;
 `;
@@ -59,6 +63,7 @@ const DescriptionWithCircle1 = styled(Caption)`
   position: relative;
   padding-left: 20px;
   margin-bottom: -10px;
+  font-size: 15px; 
 
   &::before {
     content: '';
@@ -76,7 +81,7 @@ const DescriptionWithCircle1 = styled(Caption)`
 const DescriptionWithCircle2 = styled(Caption)`
   position: relative;
   padding-left: 20px;
-  margin-bottom: px;
+  font-size: 15px; 
 
   &::before {
     content: '';
