@@ -130,12 +130,12 @@ const CountNumberText_Add = styled.p`
 `;
 
 const StyledEventText = styled.p`
-  font-family: SeoulHangangM;
   margin: 0;
 `;
 
 const StyledEventDays = styled.p`
   font-size: 24px;
+  letter-spacing: 3px;
   margin: 0;
 `;
 
