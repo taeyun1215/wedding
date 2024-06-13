@@ -8,9 +8,9 @@ const Container = styled.div`
   background-color: #f5f5f5;
   width: 85vw;
   margin: 0 auto;
-  
+
   @media screen and (min-width: 500px) {
-      width: 500px;
+    width: 500px;
   }
 `;
 export default Container;

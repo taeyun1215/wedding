@@ -10,14 +10,14 @@ const Address = () => {
       {locationInfo?.map((item: ILocationInfo) => {
         const { title, subtitle, desc1, desc2 } = item;
         const getColor = (descNumber: number) => {
-          if (title === "지하철") {
-            return descNumber === 1 ? "Gold" : "SeaGreen";
-          } else if (title === "버스") {
-            return descNumber === 1 ? "DodgerBlue" : "Tomato";
-          } else if (title === "주차안내") {
-            return descNumber === 1 ? "MediumPurple" : undefined;  
+          if (title === '지하철') {
+            return descNumber === 1 ? 'Gold' : 'SeaGreen';
+          } else if (title === '버스') {
+            return descNumber === 1 ? 'DodgerBlue' : 'Tomato';
+          } else if (title === '주차안내') {
+            return descNumber === 1 ? 'MediumPurple' : undefined;
           }
-          return "gray";  
+          return 'gray';
         };
 
         return (
@@ -50,7 +50,7 @@ const Way = styled.div`
 `;
 
 const StyledPointTitle = styled(OriginalPointTitle)`
-  font-size: 22px; 
+  font-size: 22px;
 `;
 
 const PointSubTitle = styled.h2`
@@ -63,7 +63,7 @@ const DescriptionWithCircle1 = styled(Caption)`
   position: relative;
   padding-left: 20px;
   margin-bottom: -10px;
-  font-size: 15px; 
+  font-size: 15px;
 
   &::before {
     content: '';
@@ -74,14 +74,14 @@ const DescriptionWithCircle1 = styled(Caption)`
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: ${props => props.color};
+    background-color: ${(props) => props.color};
   }
 `;
 
 const DescriptionWithCircle2 = styled(Caption)`
   position: relative;
   padding-left: 20px;
-  font-size: 15px; 
+  font-size: 15px;
 
   &::before {
     content: '';
@@ -92,6 +92,6 @@ const DescriptionWithCircle2 = styled(Caption)`
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: ${props => props.color};
+    background-color: ${(props) => props.color};
   }
 `;

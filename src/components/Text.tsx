@@ -25,6 +25,7 @@ export const PointTitle = styled.p`
 export const Paragraph = styled.p`
   line-height: 2.2rem;
   white-space: pre-line;
+  font-family: SUITE-Regular, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 `;
 
 export const Caption = styled.p<{ textAlign?: string }>`

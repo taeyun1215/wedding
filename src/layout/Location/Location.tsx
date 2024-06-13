@@ -11,6 +11,7 @@ const Location = () => {
     <LocationWrapper>
       <PointTitle>{mapInfo.address1}</PointTitle>
       <StyledCaption textAlign={'center'}>{mapInfo.address2}</StyledCaption>
+      <StyledCaption textAlign={'center'}>{mapInfo.address2}</StyledCaption>
       <Map />
       <MapButtons />
       <Address />
@@ -27,5 +28,5 @@ const LocationWrapper = styled.div`
 `;
 
 const StyledCaption = styled(Caption)`
-  margin-bottom: 40px;  // 하단에 20px의 마진 추가
+  margin-bottom: 40px; // 하단에 20px의 마진 추가
 `;
