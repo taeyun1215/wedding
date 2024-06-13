@@ -6,7 +6,6 @@ const Wrapper = styled.section`
   align-items: center;
   flex-direction: column;
   color: #222;
-  overflow: auto;
 `;
 
 export default Wrapper;
