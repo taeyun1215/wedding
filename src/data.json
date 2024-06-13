@@ -38,7 +38,7 @@
   },
   "hostInfo": [
     {
-      "host": "신랑측",
+      "host": "신랑측 계좌번호",
       "accountInfo": [
         {
           "name": "이태윤",
@@ -63,7 +63,7 @@
       ]
     },
     {
-      "host": "신부측",
+      "host": "신부측 계좌번호",
       "accountInfo": [
         {
           "name": "박진아",

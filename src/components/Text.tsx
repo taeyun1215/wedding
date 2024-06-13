@@ -26,7 +26,6 @@ export const Paragraph = styled.p`
   font-family: SeoulHangangM;
   line-height: 2.2rem;
   white-space: pre-line;
-  font-family: SUITE-Regular, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   margin-bottom: 2.5rem;
 `;
 

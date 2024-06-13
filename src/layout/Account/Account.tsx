@@ -32,6 +32,7 @@ const Account = () => {
 export default Account;
 
 const HostInfoWrapper = styled.div`
+  font-family: SeoulHangangM;
   display: flex;
   width: 90%;
   flex-direction: column;
