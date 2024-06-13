@@ -10,17 +10,11 @@ interface IAccountProps {
   kakaopayAccount?: string;
 }
 
-const AccountWrap = ({
-  name,
-  relation,
-  bank,
-  account,
-  kakaopayAccount,
-}: IAccountProps) => {
+const AccountWrap = ({ name, relation, bank, account, kakaopayAccount }: IAccountProps) => {
   const handleCopy = () => {
     navigator.clipboard.writeText(account).then(
       () => alert('계좌번호가 복사되었습니다.😉😉'),
-      () => alert('계좌번호 복사에 실패했습니다.🥲🥲')
+      () => alert('계좌번호 복사에 실패했습니다.🥲🥲'),
     );
   };
 
@@ -42,12 +36,18 @@ const AccountWrap = ({
           {bank} {account}
         </AccountInfo>
         <CopyButton onClick={handleCopy}>
-          <Copy fill="#dfdfdf" />
+          <Copy fill="#dfdfdf" width={15} height={15} />
+          <StyledCopyText>복사</StyledCopyText>
         </CopyButton>
       </Details>
     </Wrapper>
   );
 };
+
+const StyledCopyText = styled.span`
+  color: '#333';
+  font-family: 'SUITE-Regular';
+`;
 
 const Wrapper = styled.div`
   font-family: 'SUITE-Regular';
@@ -64,12 +64,12 @@ const Wrapper = styled.div`
 const NameRelation = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;  // 이 간격을 조정하면 '신랑'과 '이태윤' 사이의 거리가 변합니다.
+  gap: 10px; // 이 간격을 조정하면 '신랑'과 '이태윤' 사이의 거리가 변합니다.
 `;
 const Info = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;  // 추가된 속성
+  justify-content: space-between; // 추가된 속성
   margin: 5px 0;
 `;
 const Relation = styled.span`
@@ -95,6 +95,12 @@ const CopyButton = styled.button`
   outline: none;
   box-shadow: none;
   background: white;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 2px 6px;
+  min-width: 55px;
 `;
 
 const AccountButton = styled.a`
@@ -103,7 +109,6 @@ const AccountButton = styled.a`
   justify-content: center;
   border: none;
   border-radius: 5px;
-  padding: 0 0.8em;
   font-size: 0.7rem;
   cursor: pointer;
   gap: 2px;
@@ -111,7 +116,8 @@ const AccountButton = styled.a`
   text-decoration: none;
   outline: none;
   box-shadow: none;
-  background: white;
+  background: #ffeb00;
+  min-width: 55px;
 `;
 
 const KakaopayImg = styled.img`
