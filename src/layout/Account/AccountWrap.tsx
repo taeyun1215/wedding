@@ -36,7 +36,7 @@ const AccountWrap = ({ name, relation, bank, account, kakaopayAccount }: IAccoun
           {bank} {account}
         </AccountInfo>
         <CopyButton onClick={handleCopy}>
-          <Copy fill="#dfdfdf" width={15} height={15} />
+          <Copy fill="#dfdfdf" width={14} height={14} />
           <StyledCopyText>복사</StyledCopyText>
         </CopyButton>
       </Details>
@@ -45,12 +45,13 @@ const AccountWrap = ({ name, relation, bank, account, kakaopayAccount }: IAccoun
 };
 
 const StyledCopyText = styled.span`
-  color: '#333';
-  font-family: 'SUITE-Regular';
+  color: #333;
+  font-family: SUITE-Regular;
+  font-size: 11px;
 `;
 
 const Wrapper = styled.div`
-  font-family: 'SUITE-Regular';
+  font-family: SUITE-Regular;
   padding: 10px 0;
   border-bottom: 1px solid #dfdfdf;
   &:last-of-type {
@@ -99,8 +100,9 @@ const CopyButton = styled.button`
   align-items: center;
   border-radius: 5px;
   border: 1px solid #ccc;
-  padding: 2px 6px;
-  min-width: 55px;
+  padding: 2px;
+  min-width: 50px;
+  justify-content: center;
 `;
 
 const AccountButton = styled.a`
@@ -117,11 +119,12 @@ const AccountButton = styled.a`
   outline: none;
   box-shadow: none;
   background: #ffeb00;
-  min-width: 55px;
+  min-width: 50px;
 `;
 
 const KakaopayImg = styled.img`
-  width: 50px;
+  width: 45px;
+  height: 20px;
 `;
 
 export default AccountWrap;
