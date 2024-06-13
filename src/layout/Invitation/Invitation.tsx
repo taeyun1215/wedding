@@ -80,8 +80,8 @@ const Invitation = () => {
         ))}
       </CountNumberContainer>
       <CountNumberText_Add>
-        태윤 <span className="highlight">♥️</span> 진아의 결혼식이{' '}
-        <span className="highlight">{countdown[0]}일 </span>
+        태윤 <span className="highlight1">♥️</span> 진아의 결혼식이{' '}
+        <span className="highlight2">{countdown[0]}일 </span>
         남았습니다.
       </CountNumberText_Add>
     </InvitationWrapper>

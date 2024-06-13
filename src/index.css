@@ -19,8 +19,12 @@ body {
   background-color: #e0e7d9;
 }
 
-.highlight {
+.highlight1 {
   color: #ff1a1a;
+}
+
+.highlight2 {
+  color: #DB7093;
 }
 
 .react-calendar {

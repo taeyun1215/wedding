@@ -24,6 +24,7 @@ const Wrapper = styled.div`
 `;
 
 const WeddingDate = styled.p`
+  font-family: SeoulHangangM;
   position: absolute;
   top: 5%;
   left: 50%; 
@@ -38,8 +39,9 @@ const WeddingDate = styled.p`
 `;
 
 const WeddingWeek = styled.p`
+  font-family: SeoulHangangM;
   position: absolute;
-  top: 11%; 
+  top: 10%; 
   left: 50%;
   transform: translateX(-50%);
   font-size: 1rem;
@@ -61,6 +63,7 @@ const MainImg = styled.img`
 `;
 
 const MainTitle = styled.p`
+  font-family: SeoulHangangM;
   font-size: 1.5rem;
   color: #2F2120;
   line-height: 120%;
@@ -68,6 +71,7 @@ const MainTitle = styled.p`
 `;
 
 const SubTitle = styled.p`
+  font-family: SeoulHangangM;
   font-size: 1.1rem;
   color: #2F2120;
   line-height: 140%;
