@@ -1,11 +1,50 @@
 import styled from '@emotion/styled';
 import data from 'data.json';
-import mainImg from '@/assets/images/05.jpg'
+import mainImg from '@/assets/images/05.jpg';
+import { MdMusicNote } from 'react-icons/md';
+import { useState, useRef } from 'react';
 
 const Main = () => {
   const { greeting } = data;
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [showModal, setShowModal] = useState(true);  // 팝업 보이기 상태 추가
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  const togglePlay = () => {
+    if (audioRef.current && audioRef.current.paused) {
+      audioRef.current.play();
+      setIsPlaying(true);
+    } else {
+      audioRef.current?.pause();
+      setIsPlaying(false);
+    }
+  };
+
+  const handleModalResponse = (response: boolean) => {
+    setShowModal(false); 
+    if (response) {
+      audioRef.current?.play();
+      setIsPlaying(true);
+    }
+  };
+
   return (
     <Wrapper>
+      {showModal && (
+        <Modal>
+          <ModalContent>
+            <p>노래가 나옵니다. 재생해도 괜찮을까요?</p>
+            <button onClick={() => handleModalResponse(true)}>예</button>
+            <button onClick={() => handleModalResponse(false)}>아니오</button>
+          </ModalContent>
+        </Modal>
+      )}
+      <div>
+        <MusicButton onClick={togglePlay}>
+          <MdMusicNote size="24px" color={isPlaying ? '#4CAF50' : '#2F2120'} />
+        </MusicButton>
+        <audio ref={audioRef} src="/one_life.mp3" />
+      </div>
       <WeddingDate>{greeting.weddingDate}</WeddingDate>
       <WeddingWeek>{greeting.weddingWeek}</WeddingWeek>
       <MainImg src={mainImg} />
@@ -17,6 +56,37 @@ const Main = () => {
 
 export default Main;
 
+const Modal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+`;
+
+const ModalContent = styled.div`
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+`;
+
+const MusicButton = styled.button`
+  position: absolute;
+  right: 0;
+  top: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #2F2120;
+`;
+// 나머지 스타일은 기존 코드와 동일
 const Wrapper = styled.div`
   position: relative; 
   width: 100%;
