@@ -34,14 +34,14 @@ const Main = () => {
         <Modal>
           <ModalContent>
             <p>노래가 나옵니다. 재생해도 괜찮을까요?</p>
-            <button onClick={() => handleModalResponse(true)}>예</button>
-            <button onClick={() => handleModalResponse(false)}>아니오</button>
+            <Button onClick={() => handleModalResponse(true)}>예</Button>
+            <Button onClick={() => handleModalResponse(false)}>아니오</Button>
           </ModalContent>
         </Modal>
       )}
       <div>
         <MusicButton onClick={togglePlay}>
-          <MdMusicNote size="24px" color={isPlaying ? '#4CAF50' : '#2F2120'} />
+          <MdMusicNote size="24px" color={isPlaying ? '#1E90FF' : '#2F2120'} />
         </MusicButton>
         <audio ref={audioRef} src="/one_life.mp3" />
       </div>
@@ -70,11 +70,37 @@ const Modal = styled.div`
 `;
 
 const ModalContent = styled.div`
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff4e6;  // Soft peach background
+  padding: 20px 40px;
+  border-radius: 15px;  // Rounded corners
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  // Soft shadow
   text-align: center;
+  font-family: 'SeoulHangangM';  // Custom font
+  color: #000000; 
+`;
+
+const Button = styled.button`
+  padding: 8px 16px;
+  margin: 10px;
+  background-color: #f9d6e4;  // Light pink
+  color: #000000;  
+  border: none;
+  border-radius: 20px;  // Very rounded corners
+  cursor: pointer;
+  font-family: 'SeoulHangangM';  // Ensure font consistency
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);  // Subtle shadow for depth
+  transition: background-color 0.3s, transform 0.3s;
+
+  &:hover {
+    background-color: #f3a6c0;  // Darker pink on hover
+    transform: translateY(-2px);  // Slight lift effect
+  }
+
+  &:focus {
+    outline: none;  // Remove focus outline
+    background-color: #ee90af;  // Even darker for focus state
+  }
 `;
 
 const MusicButton = styled.button`
@@ -86,7 +112,7 @@ const MusicButton = styled.button`
   cursor: pointer;
   color: #2F2120;
 `;
-// 나머지 스타일은 기존 코드와 동일
+
 const Wrapper = styled.div`
   position: relative; 
   width: 100%;
