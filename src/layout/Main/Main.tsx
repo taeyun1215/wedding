@@ -43,7 +43,7 @@ const Main = () => {
         <MusicButton onClick={togglePlay}>
           <MdMusicNote size="24px" color={isPlaying ? '#1E90FF' : '#2F2120'} />
         </MusicButton>
-        <audio ref={audioRef} src="/one_life.mp3" />
+        <audio ref={audioRef} src="/how_do_you.mp3" />
       </div>
       <WeddingDate>{greeting.weddingDate}</WeddingDate>
       <WeddingWeek>{greeting.weddingWeek}</WeddingWeek>
