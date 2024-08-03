@@ -14,6 +14,15 @@ import image13 from '/image/13.jpg';
 import image14 from '/image/14.jpg';
 import image15 from '/image/15.jpg';
 import image16 from '/image/16.jpg';
+import image17 from '/image/17.jpg';
+import image18 from '/image/18.jpg';
+import image19 from '/image/19.jpg';
+import image20 from '/image/20.jpg';
+import image21 from '/image/21.jpg';
+import image22 from '/image/22.jpg';
+import image23 from '/image/23.jpg';
+import image24 from '/image/24.jpg';
+import image25 from '/image/25.jpg';
 
 const images = [
   /* 이미지 경로를 리스트로 저장 */
@@ -76,6 +85,42 @@ const images = [
   {
     alt: 'image16',
     source: image16,
+  },
+  {
+    alt: 'image17',
+    source: image17,
+  },
+  {
+    alt: 'image18',
+    source: image18,
+  },
+  {
+    alt: 'image19',
+    source: image19,
+  },
+  {
+    alt: 'image20',
+    source: image20,
+  },
+  {
+    alt: 'image21',
+    source: image21,
+  },
+  {
+    alt: 'image22',
+    source: image22,
+  },
+  {
+    alt: 'image23',
+    source: image23,
+  },
+  {
+    alt: 'image24',
+    source: image24,
+  },
+  {
+    alt: 'image25',
+    source: image25,
   },
 ];
 
