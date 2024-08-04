@@ -23,6 +23,7 @@ import image22 from '/image/22.jpg';
 import image23 from '/image/23.jpg';
 import image24 from '/image/24.jpg';
 import image25 from '/image/25.jpg';
+import image26 from '/image/26.jpg';
 
 const images = [
   /* 이미지 경로를 리스트로 저장 */
@@ -121,6 +122,10 @@ const images = [
   {
     alt: 'image25',
     source: image25,
+  },
+  {
+    alt: 'image26',
+    source: image26,
   },
 ];
 
