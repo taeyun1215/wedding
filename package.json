@@ -25,6 +25,7 @@
     "react-calendar": "^5.0.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.1",
+    "react-image-lightbox": "^5.1.4",
     "react-naver-maps": "^0.1.2",
     "react-photoswipe-gallery": "^2.2.7"
   },

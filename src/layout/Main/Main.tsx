@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 import data from 'data.json';
-import mainImg from '@/assets/images/05.jpg';
+import mainImg from '/images/05.jpg';
 import { MdMusicNote } from 'react-icons/md';
 import { useState, useRef } from 'react';
 
 const Main = () => {
   const { greeting } = data;
   const [isPlaying, setIsPlaying] = useState(false);
-  const [showModal, setShowModal] = useState(true);  // 팝업 보이기 상태 추가
+  const [showModal, setShowModal] = useState(true); // 팝업 보이기 상태 추가
   const audioRef = useRef<HTMLAudioElement>(null);
 
   const togglePlay = () => {
@@ -21,7 +21,7 @@ const Main = () => {
   };
 
   const handleModalResponse = (response: boolean) => {
-    setShowModal(false); 
+    setShowModal(false);
     if (response) {
       audioRef.current?.play();
       setIsPlaying(true);
@@ -70,36 +70,38 @@ const Modal = styled.div`
 `;
 
 const ModalContent = styled.div`
-  background-color: #fff4e6;  // Soft peach background
+  background-color: #fff4e6; // Soft peach background
   padding: 20px 40px;
-  border-radius: 15px;  // Rounded corners
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  // Soft shadow
+  border-radius: 15px; // Rounded corners
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Soft shadow
   text-align: center;
-  font-family: 'SeoulHangangM';  // Custom font
-  color: #000000; 
+  font-family: 'SeoulHangangM'; // Custom font
+  color: #000000;
 `;
 
 const Button = styled.button`
   padding: 8px 16px;
   margin: 10px;
-  background-color: #f9d6e4;  // Light pink
-  color: #000000;  
+  background-color: #f9d6e4; // Light pink
+  color: #000000;
   border: none;
-  border-radius: 20px;  // Very rounded corners
+  border-radius: 20px; // Very rounded corners
   cursor: pointer;
-  font-family: 'SeoulHangangM';  // Ensure font consistency
+  font-family: 'SeoulHangangM'; // Ensure font consistency
   font-size: 16px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);  // Subtle shadow for depth
-  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); // Subtle shadow for depth
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
 
   &:hover {
-    background-color: #f3a6c0;  // Darker pink on hover
-    transform: translateY(-2px);  // Slight lift effect
+    background-color: #f3a6c0; // Darker pink on hover
+    transform: translateY(-2px); // Slight lift effect
   }
 
   &:focus {
-    outline: none;  // Remove focus outline
-    background-color: #ee90af;  // Even darker for focus state
+    outline: none; // Remove focus outline
+    background-color: #ee90af; // Even darker for focus state
   }
 `;
 
@@ -110,11 +112,11 @@ const MusicButton = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-  color: #2F2120;
+  color: #2f2120;
 `;
 
 const Wrapper = styled.div`
-  position: relative; 
+  position: relative;
   width: 100%;
   max-width: 450px;
 `;
@@ -123,26 +125,26 @@ const WeddingDate = styled.p`
   font-family: SeoulHangangM;
   position: absolute;
   top: 5%;
-  left: 50%; 
-  transform: translateX(-50%); 
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 1.7rem;
   font-weight: 400;
-  color: #2F2120;
+  color: #2f2120;
   line-height: 100%;
   white-space: pre-line;
   margin: 0;
-  z-index: 05;  
+  z-index: 05;
 `;
 
 const WeddingWeek = styled.p`
   font-family: SeoulHangangM;
   position: absolute;
-  top: 10%; 
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 1rem;
   font-weight: 300;
-  color: #2F2120;
+  color: #2f2120;
   line-height: 120%;
   white-space: pre-line;
   margin-top: 0;
@@ -150,18 +152,18 @@ const WeddingWeek = styled.p`
 `;
 
 const MainImg = styled.img`
-  border-radius: 0px 0px 0 0;  // 상단 모서리의 둥근 테두리
-  width: 100%;  // 이미지 너비를 부모 컨테이너에 맞춤
-  max-width: 600px;  // 최대 너비 증가
-  padding-top: 0px;  // 상단 패딩
-  margin: auto;  // 자동 마진으로 중앙 정렬
-  display: block;  // 블록 레벨 요소로 설정
+  border-radius: 0px 0px 0 0; // 상단 모서리의 둥근 테두리
+  width: 100%; // 이미지 너비를 부모 컨테이너에 맞춤
+  max-width: 600px; // 최대 너비 증가
+  padding-top: 0px; // 상단 패딩
+  margin: auto; // 자동 마진으로 중앙 정렬
+  display: block; // 블록 레벨 요소로 설정
 `;
 
 const MainTitle = styled.p`
   font-family: SeoulHangangM;
   font-size: 1.5rem;
-  color: #2F2120;
+  color: #2f2120;
   line-height: 120%;
   white-space: pre-line;
 `;
@@ -169,7 +171,7 @@ const MainTitle = styled.p`
 const SubTitle = styled.p`
   font-family: SeoulHangangM;
   font-size: 1.1rem;
-  color: #2F2120;
+  color: #2f2120;
   line-height: 140%;
   white-space: pre-line;
 `;
