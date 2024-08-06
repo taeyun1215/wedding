@@ -1,4 +1,3 @@
-// import 'react-image-lightbox/style.css';
 import { useState } from 'react';
 import styled from '@emotion/styled';
 import images from '@/layout/Gallery/Images';
