@@ -208,12 +208,12 @@ const StyledCalendar = styled(Calendar)`
     background-color: #e88ca6; // Highlight specific dates
     color: white;
     border-radius: 20%; // Circle shape
-    padding: 10px 0;
+    padding: 7px 0;
     font-size: 18px; // Adjust font size for highlighted days
     font-weight: bold; // Make the font weight bold
     flex: 0 0 11.2857% !important;
     width: 40px;
-    height: 40px;
+    height: 35px;
     margin: 5px 0 0 4px;
   }
 
