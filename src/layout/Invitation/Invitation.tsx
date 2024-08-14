@@ -49,28 +49,30 @@ const Invitation = () => {
         <StyledEventDays>2024년 09월 28일 토요일 오후 5시</StyledEventDays>
         <StyledEventText>포스코센터 아트홀</StyledEventText>
       </div>
-      <StyledCalendar
-        value={date}
-        minDate={new Date(2024, 8, 1)}
-        maxDate={new Date(2024, 8, 30)}
-        locale="ko-KR"
-        calendarType="gregory"
-        formatDay={(_locale, date) => dayjs(date).format('D')}
-        tileClassName={({ date, view }) => {
-          if (view === 'month') {
-            if (date.getMonth() !== 8) {
-              // 9월(8)이 아닐 경우
-              return 'hidden'; // hidden 클래스 적용
+      <CalendarWrapper>
+        <StyledCalendar
+          value={date}
+          minDate={new Date(2024, 8, 1)}
+          maxDate={new Date(2024, 8, 30)}
+          locale="ko-KR"
+          calendarType="gregory"
+          formatDay={(_locale, date) => dayjs(date).format('D')}
+          tileClassName={({ date, view }) => {
+            if (view === 'month') {
+              if (date.getMonth() !== 8) {
+                // 9월(8)이 아닐 경우
+                return 'hidden'; // hidden 클래스 적용
+              }
+              if (isSunday(date)) {
+                return 'sunday';
+              }
+              if (date.getDate() === 28) {
+                return 'highlight'; // 특정 날짜 강조
+              }
             }
-            if (isSunday(date)) {
-              return 'sunday';
-            }
-            if (date.getDate() === 28) {
-              return 'highlight'; // 특정 날짜 강조
-            }
-          }
-        }}
-      />
+          }}
+        />
+      </CalendarWrapper>
       <CountNumberContainer>
         {countdown.map((num, index) => (
           <>
@@ -157,6 +159,11 @@ const StyledEventText = styled.p`
   white-space: pre-line;
 `;
 
+const CalendarWrapper = styled.div`
+  width: 80%; /* 캘린더를 80% 크기로 줄임 */
+  margin: 0 auto; /* 중앙 정렬 */
+`;
+
 const StyledCalendar = styled(Calendar)`
   .react-calendar {
     border: none; // Add border
@@ -178,7 +185,7 @@ const StyledCalendar = styled(Calendar)`
 
   .react-calendar__month-view__days__day {
     color: #333; // Change text color
-    font-size: 18px; // Adjust font size
+    font-size: 15px; // Adjust font size
     font-weight: 500; // Adjust font weight
     text-align: center; // Center text
     font-family: SeoulHangangM;
@@ -219,7 +226,7 @@ const StyledCalendar = styled(Calendar)`
   }
 
   .react-calendar__month-view__weekdays {
-    font-size: 18px; // Adjust font size
+    font-size: 15px; // Adjust font size
     font-family: SeoulHangangM;
   }
 
