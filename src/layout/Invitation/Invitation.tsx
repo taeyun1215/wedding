@@ -45,7 +45,6 @@ const Invitation = () => {
       <Bar /> {/* 바1 */}
       <Paragraph>{greeting.people1}</Paragraph>
       <Bar /> {/* 바2 */}
-      <br />
       <div>
         <StyledEventDays>2024. 09. 28</StyledEventDays>
         <StyledEventText>토요일 오후 5시</StyledEventText>
