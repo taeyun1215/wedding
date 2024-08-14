@@ -45,7 +45,7 @@
           "name": "이태윤",
           "relation": "신랑",
           "bank": "카카오",
-          "account": "3333-08-3400592",
+          "account": "3333083400592",
           "kakaopayAccount": "https://qr.kakaopay.com/Ej8tAeJ4w",
           "tossAccount": ""
         },
@@ -59,7 +59,7 @@
           "name": "정정아",
           "relation": "어머니",
           "bank": "신한은행",
-          "account": "110-330-863874"
+          "account": "110330863874"
         }
       ]
     },
@@ -70,7 +70,7 @@
           "name": "박진아",
           "relation": "신부",
           "bank": "하나은행",
-          "account": "704-910554-63507",
+          "account": "70491055463507",
           "kakaopayAccount": "",
           "tossAccount": ""
         },
@@ -78,13 +78,13 @@
           "name": "박인수",
           "relation": "아버지",
           "bank": "우리은행",
-          "account": "1370-934-3112101"
+          "account": "13709343112101"
         },
         {
           "name": "노성희",
           "relation": "어머니",
           "bank": "농협은행",
-          "account": "611810-56-010587"
+          "account": "61181056010587"
         }
       ]
     }
