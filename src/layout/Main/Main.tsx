@@ -49,7 +49,7 @@ const Main = () => {
       <WeddingWeek>{greeting.weddingWeek}</WeddingWeek>
       <MainImg src={mainImg} />
       <MainTitle>{greeting.title}</MainTitle>
-      <SubTitle>{greeting.eventDetail}</SubTitle>
+      {/* <SubTitle>{greeting.eventDetail}</SubTitle> */}
     </Wrapper>
   );
 };
