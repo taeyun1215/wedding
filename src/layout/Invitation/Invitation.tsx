@@ -42,6 +42,10 @@ const Invitation = () => {
   return (
     <InvitationWrapper>
       <Paragraph>{greeting.message}</Paragraph>
+      <Bar /> {/* 바1 */}
+      <Paragraph>{greeting.people1}</Paragraph>
+      <Bar /> {/* 바2 */}
+      <br />
       <div>
         <StyledEventDays>2024. 09. 28</StyledEventDays>
         <StyledEventText>토요일 오후 5시</StyledEventText>
@@ -89,6 +93,15 @@ const Invitation = () => {
 };
 
 export default Invitation;
+
+const Bar = styled.div`
+  width: 100%;
+  max-width: 120px; /* 선의 최대 길이 */
+  height: 1px; /* 선의 두께 */
+  margin: 40px 0; /* 위아래 여백을 30px로 증가 */
+  background-color: rgba(0, 0, 0, 0.7); /* 선의 색상을 검은색으로 설정하고 투명도를 70%로 적용 */
+  border-radius: 0; /* 끝을 직각으로 설정 */
+`;
 
 const InvitationWrapper = styled.div`
   display: flex;

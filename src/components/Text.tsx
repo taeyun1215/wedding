@@ -26,7 +26,7 @@ export const Paragraph = styled.p`
   font-family: SeoulHangangM;
   line-height: 2.2rem;
   white-space: pre-line;
-  margin-bottom: 2.5rem;
+  margin-bottom: -0rem;
 `;
 
 export const Caption = styled.p<{ textAlign?: string }>`
