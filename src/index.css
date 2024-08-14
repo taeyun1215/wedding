@@ -17,6 +17,8 @@ body {
   display: flex;
   justify-content: center;
   background-color: #f5f5f5;
+
+  touch-action: pan-x pan-y;
 }
 
 .highlight1 {
@@ -24,7 +26,7 @@ body {
 }
 
 .highlight2 {
-  color: #DB7093;
+  color: #db7093;
 }
 
 .react-calendar {

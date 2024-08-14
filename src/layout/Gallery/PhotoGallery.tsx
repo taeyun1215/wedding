@@ -60,14 +60,20 @@ const PhotoGallery = () => {
         <ZoomImageContainer>
           <ZoomImageWrap>
             <ZoomIconClose onClick={() => setIsOpen(false)} />
-            <ZoomIconArrowLeft onClick={() => handleOnMove('left')} />
+            <ZoomIconArrowLeft
+              onClick={() => handleOnMove('left')}
+              visibility={currentIndex === 0 ? 'hidden' : 'visible'}
+            />
             <InnerWrap
               style={{ transform: `translateX(-${currentIndex * 100}%)`, transition: 'none' }}>
               {images.map((v, index) => (
                 <img key={index} src={v.source} alt={v.alt} width={'100%'} />
               ))}
             </InnerWrap>
-            <ZoomIconArrowRight onClick={() => handleOnMove('right')} />
+            <ZoomIconArrowRight
+              onClick={() => handleOnMove('right')}
+              visibility={currentIndex === images.length - 1 ? 'hidden' : 'visible'}
+            />
           </ZoomImageWrap>
         </ZoomImageContainer>
       )}
@@ -89,8 +95,7 @@ const GalleryContainer = styled.div`
 
 const GalleryWrap = styled.div`
   overflow: hidden;
-  max-width: 280px;
-  max-height: 380px;
+  min-width: 280px;
 `;
 
 const InnerWrap = styled.div`
