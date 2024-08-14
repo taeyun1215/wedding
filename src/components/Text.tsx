@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const Heading1 = styled.p`
   font-family: SeoulHangangM, serif;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin: 10px;
   color: #e88ca6;
   white-space: pre-line;
