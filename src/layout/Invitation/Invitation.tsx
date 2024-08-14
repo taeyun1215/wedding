@@ -207,7 +207,7 @@ const StyledCalendar = styled(Calendar)`
   .highlight {
     background-color: #e88ca6; // Highlight specific dates
     color: white;
-    border-radius: 50%; // Circle shape
+    border-radius: 20%; // Circle shape
     padding: 10px 0;
     font-size: 18px; // Adjust font size for highlighted days
     font-weight: bold; // Make the font weight bold
