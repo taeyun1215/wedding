@@ -47,7 +47,6 @@ function App() {
           <Invitation />
         </Wrapper>
         <Wrapper ref={galleryRef}>
-          <Heading1>Gallery</Heading1>
           <GalleryWrap />
         </Wrapper>
         <Wrapper>

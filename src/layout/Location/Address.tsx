@@ -51,7 +51,9 @@ const Way = styled.div`
 
 const StyledPointTitle = styled(OriginalPointTitle)`
   font-size: 22px;
+  color: #000; /* 텍스트 색상을 검정으로 설정 */
 `;
+
 
 const PointSubTitle = styled.h2`
   font-size: 17px;
