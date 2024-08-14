@@ -141,14 +141,20 @@ const CountNumberText_Add = styled.p`
   font-size: 18px;
 `;
 
-const StyledEventText = styled.p`
-  margin: 0;
+const StyledEventDays = styled.p`
+  font-family: SeoulHangangM;
+  font-size: 1.1rem;
+  color: #2f2120;
+  line-height: 140%;
+  white-space: pre-line;
 `;
 
-const StyledEventDays = styled.p`
-  font-size: 18px;
-  letter-spacing: 3px;
-  margin: 0;
+const StyledEventText = styled.p`
+  font-family: SeoulHangangM;
+  font-size: 1.1rem;
+  color: #2f2120;
+  line-height: 140%;
+  white-space: pre-line;
 `;
 
 const StyledCalendar = styled(Calendar)`
