@@ -21,9 +21,6 @@ import image20 from '/images/20.jpg';
 import image21 from '/images/21.jpg';
 import image22 from '/images/22.jpg';
 import image23 from '/images/23.jpg';
-import image24 from '/images/24.jpg';
-import image25 from '/images/25.jpg';
-import image26 from '/images/26.jpg';
 
 const images = [
   /* 이미지 경로를 리스트로 저장 */
@@ -114,19 +111,7 @@ const images = [
   {
     alt: 'image23',
     source: image23,
-  },
-  {
-    alt: 'image24',
-    source: image24,
-  },
-  {
-    alt: 'image25',
-    source: image25,
-  },
-  {
-    alt: 'image26',
-    source: image26,
-  },
+  }
 ];
 
 export default images;

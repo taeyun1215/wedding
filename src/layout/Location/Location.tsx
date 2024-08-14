@@ -27,9 +27,19 @@ const LocationWrapper = styled.div`
 `;
 
 const StyledCaption1 = styled(Caption)`
-  margin-bottom: -10px; // 하단에 20px의 마진 추가
+  font-family: SeoulHangangM;
+  font-size: 1.1rem;
+  color: #2f2120;
+  line-height: 140%;
+  white-space: pre-line;
+  margin-bottom: -5px; // 하단에 20px의 마진 추가
 `;
 
 const StyledCaption2 = styled(Caption)`
+  font-family: SeoulHangangM;
+  font-size: 1.1rem;
+  color: #2f2120;
+  line-height: 140%;
+  white-space: pre-line;  
   margin-bottom: 40px; // 하단에 20px의 마진 추가
 `;
