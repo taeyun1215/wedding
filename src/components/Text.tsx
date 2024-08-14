@@ -24,6 +24,7 @@ export const PointTitle = styled.p`
 
 export const Paragraph = styled.p`
   font-family: SeoulHangangM;
+  font-size: 1.1rem;
   line-height: 2.2rem;
   white-space: pre-line;
   margin-bottom: -0rem;
