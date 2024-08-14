@@ -43,7 +43,7 @@ function App() {
           <Main />
         </Wrapper>
         <Wrapper>
-          <Heading1>Welcome</Heading1>
+          <Heading1>Wedding Invitation</Heading1>
           <Invitation />
         </Wrapper>
         <Wrapper ref={galleryRef}>
