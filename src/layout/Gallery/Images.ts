@@ -122,7 +122,7 @@ const images = [
   {
     alt: 'image25',
     source: image25,
-  }
+  },
   {
     alt: 'image26',
     source: image26,
