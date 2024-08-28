@@ -114,7 +114,7 @@ const images = [
   {
     alt: 'image23',
     source: image23,
-  },,
+  }, 
   {
     alt: 'image24',
     source: image24,
